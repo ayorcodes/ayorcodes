@@ -64,7 +64,7 @@ I ship in small, steady pieces. At CopyMe I've merged 159 pull requests in the l
 ### What I work with
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,nestjs,nodejs,nextjs,react,flutter,dart,postgres,redis,rabbitmq,prisma,docker,tailwind&theme=dark"/>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts%2Cnestjs%2Cnodejs%2Cnextjs%2Creact%2Cflutter%2Cdart%2Cpostgres%2Credis%2Crabbitmq%2Cprisma%2Cdocker%2Ctailwind&theme=dark"/>
   <img src="https://skillicons.dev/icons?i=ts,nestjs,nodejs,nextjs,react,flutter,dart,postgres,redis,rabbitmq,prisma,docker,tailwind&theme=light" alt="TypeScript, NestJS, Node.js, Next.js, React, Flutter, Dart, PostgreSQL, Redis, RabbitMQ, Prisma, Docker, Tailwind"/>
 </picture>
 
