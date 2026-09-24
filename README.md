@@ -1,69 +1,73 @@
-# Ayomide Adejola
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.png"/>
+  <img src="./assets/header-light.png" width="100%" alt="Ayomide Adejola, software engineer"/>
+</picture>
 
-![Profile views](https://komarev.com/ghpvc/?username=ayorcodes&label=Profile%20views&color=0e75b6&style=flat)
+<br/>
 
-Software engineer. TypeScript, NestJS, Flutter, Next.js. Been doing this since 2020 — mobile, web, and backend, mostly fintech, crypto, and whatever interesting problems show up in between.
+I've spent six years as a software engineer across fintech, crypto, trading, e-commerce, hospitality and sports. I work on the whole product: backend, web and mobile.
 
-I care about clean architecture, good test coverage, and systems that don't break at 3am. My work tends to live in the layer between the database and the API surface — queues, webhooks, real-time pipelines, payment flows — and lately in the apps people actually hold.
+I'm a problem solver. I like taking headaches away from people, so if something can be automated or handled by a system, I want it handled, and the people involved can put their attention on work that needs them. I take ownership of what I ship and hold it to a standard I'm proud of.
 
----
+I ship in small, steady pieces. At CopyMe I've merged 159 pull requests in the last seven weeks, and at Opsin I merged 175 in fourteen.
 
-**TypeScript · NestJS · Node.js · Flutter · Dart · Next.js · React · PostgreSQL · Redis · BullMQ · RabbitMQ · WebSockets · gRPC · Prisma · Tailwind · Moralis · Turnkey**
+[LinkedIn](https://linkedin.com/in/ayomide-adejola) &nbsp;·&nbsp; [adeayo35@gmail.com](mailto:adeayo35@gmail.com) &nbsp;·&nbsp; [npm](https://www.npmjs.com/~ayorcodes)
 
----
+<br/>
 
-## Things I've built
+### Products I built on my own
 
-**[Raqet](https://getraqet.com)** — the operating platform for padel clubs, and the player app that fills their courts. Live on the App Store and Google Play. I built it end to end solo: a NestJS/PostgreSQL API, three web surfaces (public site, club staff console, super admin), and a Flutter player app generated from the API spec in a Turborepo. The payment layer is where the care went — a Redis lock across the payment window plus a database-level unique constraint so a court can never be double-booked, row-level locks so a wallet can't be double-spent under concurrency, idempotent webhook handlers, and split bookings that only commit once every player in the group has actually paid. Tournaments, coaching, facility orders, and IPR rating run on the same core.
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <a href="https://getraqet.com"><img src="./assets/raqet.jpg" alt="Raqet mobile app"/></a>
+      <p><a href="https://getraqet.com"><b>Raqet</b></a><br/>
+      Management software for padel clubs: courts, bookings, coaching, tournaments and payments, with a player app on iOS and Android.</p>
+      <p>NestJS API with 108 data models, a Flutter app and three Next.js apps. About 1,100 commits in four and a half months. <a href="https://apps.apple.com/ng/app/raqet/id6762042311">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.raqetos">Google Play</a></p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://vendoorly.store"><img src="./assets/vendoorly.jpg" alt="Vendoorly"/></a>
+      <p><a href="https://vendoorly.store"><b>Vendoorly</b></a><br/>
+      Point of sale and back office for restaurants, with online ordering for their customers. A restaurant in Ibadan runs on it daily.</p>
+      <p>Tables, kitchen tickets, split bills, shifts, stock by recipe, and reports that reconcile with the bank. About 1,300 commits and 430 test files since May.</p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://www.cakeyswithlove.com"><img src="./assets/cakeys.jpg" alt="Cakeys With Love"/></a>
+      <p><a href="https://www.cakeyswithlove.com"><b>Cakeys With Love</b></a><br/>
+      Online ordering and delivery for a bakery in Ibadan.</p>
+      <p>Vendoorly and Cakeys both run on CloudCommerce and InboxPay, a commerce and payments platform I built and publish as SDKs. Catalog, checkout, orders and payments are shared, not rebuilt.</p>
+    </td>
+  </tr>
+</table>
 
-**Vendoorly** *(live — [vendoorly.store](https://vendoorly.store))* — a restaurant operating system with an ordering marketplace attached. An Ibadan restaurant runs its whole day on it: tables and seats, waiter rounds, fire-to-kitchen, bill split, tender and change, shifts and cash-drawer reconciliation, recipe-level stock depletion, and a financial analytics cockpit that reconciles against the bank. The interesting constraints were physical, not technical — the trading day rolls at 5am because that's when a restaurant actually closes, and every report is cut on the same rule. NestJS + Next.js 15 on top of CloudCommerce (catalog, checkout, order lifecycle) and InboxPay (transfer confirmation), with WebSocket push on the operational hot paths, seven operator roles, and an immutable restatement pipeline so a correction changes the report without rewriting history.
+### Tools I've made
 
-**Cakeys With Love** *(live — [cakeyswithlove.com](https://www.cakeyswithlove.com))* — a branded ordering platform for an Ibadan artisan bakery. Storefront, cart and checkout, customer accounts, delivery zones, an owner console for the order queue and catalog, and branded email receipts. Next.js 15, NestJS 11, Prisma, Firebase Auth, Resend, running on CloudCommerce and InboxPay.
+<table>
+  <tr><td nowrap><a href="https://www.npmjs.com/package/@ayorcodes/claudespace"><b>claudespace</b></a></td><td>Runs a small team of Claude Code agents in one terminal. Each has one job, such as planning, writing code or reviewing it, and passes its work to the next when it's done.</td></tr>
+  <tr><td nowrap><a href="https://github.com/ayorcodes/opclaude"><b>opclaude</b></a></td><td>Lets you use the Claude Code CLI with other models, through opencode, Ollama or any OpenAI-compatible provider.</td></tr>
+  <tr><td nowrap><a href="https://github.com/ayorcodes/faxo"><b>faxo</b></a></td><td>A payment gateway for accepting USDC on Ethereum, Base and BNB Chain. Funds move to the merchant's treasury automatically after each payment.</td></tr>
+  <tr><td nowrap><a href="https://github.com/ayorcodes/SenDT"><b>SenDT</b></a></td><td>Deposit crypto and send naira to any Nigerian bank account, without going through an exchange.</td></tr>
+  <tr><td nowrap><a href="https://github.com/ayorcodes/volta"><b>volta</b></a></td><td>For buildings that run on generators. It tracks fuel, schedules generator runs and alerts staff before each one.</td></tr>
+  <tr><td nowrap><a href="https://www.npmjs.com/package/@ayorcodes/remita-js"><b>remita-js</b></a></td><td>A Node.js library for the Remita payments API.</td></tr>
+</table>
 
-**[@ayorcodes/claudespace](https://www.npmjs.com/package/@ayorcodes/claudespace)** — a multi-agent software delivery pipeline that runs in one terminal window. Separate Claude Code processes, one per role — chief, researcher, analyst, planner, principal, implementer, reviewer, plus a conductor that turns one goal into a backlog and drives it unattended — each pinned to its own model and effort tier, and none able to read another's session. The handoff is files and hooks, not a chatroom: a role ends its turn by writing a marker (`<role>.done`, or `<role>.blocked` to bounce a question or a rejection back) whose contents are the path to the artifact it just produced, and a Claude Code Stop hook reads that marker, resolves the next role from the pipeline map, and delivers a prompt into its pane pointing at the artifact. A role that ends a turn with no marker gets its stop blocked and a reminder fed back into the same session, rather than the pipeline going quiet. Pipeline state lives outside your project, in `~/.claudespace/projects/<slug>/`. macOS on Apple Silicon. The GUI is next.
+### Where I've worked
 
-**[Faxo](https://github.com/ayorcodes/faxo)** — crypto payment gateway, Stripe-style. Every payment intent gets its own MPC wallet address via Turnkey. Moralis Streams watches the chain and drives the `pending → confirming → confirmed → finalized` lifecycle. EIP-3009 gasless sweeps move USDC from deposit wallets to treasury without the deposit address ever needing ETH. Webhook delivery with exponential backoff, HMAC signing, and full delivery logs. Runs across Ethereum, Base, and BNB Chain.
+<table>
+  <tr><td valign="top" nowrap><b>CopyMe Crypto</b><br/>2026 to now</td><td>Copy-trading platform that mirrors a lead trader's positions onto followers' exchange accounts. Taking it from pre-launch to production with a team of about nine, across the NestJS backend, Flutter app, admin dashboard and website.<ul><li>Exchange-account safety checks: margin and hedge mode, API key permissions, and regional restrictions</li><li>Rules on the existing copy engine: fee caps, concurrency locks, and closing copies when the lead trader exits</li><li>Risk tiers, account deletion across all four apps, and most of the mobile redesign on a new design system</li><li>159 merged PRs in seven weeks, and the top contributor to the mobile app this year</li></ul></td></tr>
+  <tr><td valign="top" nowrap><b>Opsin</b><br/>2025 to 2026</td><td>Crypto trading platform with a 12-person engineering team.<ul><li>Owned Social Watch: reads Discord and Telegram groups, detects token calls, and scores callers on how their calls perform, live</li><li>Moved discovery and watchlists onto ClickHouse with live WebSocket updates</li><li>Fixed RabbitMQ connection handling across 26 services, and added wallet import and export</li><li>175 merged PRs in about 14 weeks, second most on the backend</li></ul></td></tr>
+  <tr><td valign="top" nowrap><b>Moralis</b><br/>2021 to 2025</td><td>Blockchain data APIs for developers.<ul><li>Helped move the backend from a single Express app to NestJS and gRPC microservices</li><li>Shipped 30+ production features: dynamic pricing, NFT floor prices, token metadata pipelines and node integrations</li><li>Built a tiered job queue that cut latency for premium users, and wrote much of the API documentation new engineers learned from</li></ul></td></tr>
+  <tr><td valign="top" nowrap><b>SpottR</b><br/>2021 to 2022</td><td>Location-based marketplace.<ul><li>Set up the NestJS backend and the Flutter app from the first commit</li><li>Built the wallet (naira through Paystack, plus BNB, ETH and the Cliq token), order escrow, map search, chat and push notifications</li></ul></td></tr>
+  <tr><td valign="top" nowrap><b>Joovlin</b><br/>2020 to 2021</td><td>Fintech. The first production backend I owned end to end.<ul><li>Designed the payment and wallet services, split the monolith into services, and built the audit trail compliance needed</li></ul></td></tr>
+</table>
 
-**Social Watch / Overwatch** *(Opsin — closed source)* — real-time social signal system built into Opsin's crypto trading platform. Users connect their Discord and Telegram accounts, select channels to watch, and the platform ingests every message looking for token calls — `$TICKER` mentions, `.c` contract references, raw address pastes. Each call gets matched to a caller, timestamped, and streamed to the frontend over WebSocket so traders see who called what and when, live.
+### What I work with
 
-**[SenDT](https://github.com/ayorcodes/sendt)** — deposit crypto, receive naira in your bank. Non-custodial MPC wallet per user (Turnkey), Moralis detects the on-chain transfer, NGN gets credited atomically at the live CoinGecko rate, and Paystack handles the bank transfer. The whole thing is event-driven — no polling anywhere in the stack. SSE keeps the frontend live.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,nestjs,nodejs,nextjs,react,flutter,dart,postgres,redis,rabbitmq,prisma,docker,tailwind&theme=dark"/>
+  <img src="https://skillicons.dev/icons?i=ts,nestjs,nodejs,nextjs,react,flutter,dart,postgres,redis,rabbitmq,prisma,docker,tailwind&theme=light" alt="TypeScript, NestJS, Node.js, Next.js, React, Flutter, Dart, PostgreSQL, Redis, RabbitMQ, Prisma, Docker, Tailwind"/>
+</picture>
 
-**SpottR** *(closed source)* — hyperlocal crypto-enabled marketplace. Users list products with location data, buyers discover them by proximity, and transactions flow through a full order lifecycle — request, negotiation, confirmation, logistics, escrow release. The wallet supports both NGN (Paystack) and crypto (Cliq Token, BNB, ETH via Threshold Network), with atomic debit/credit on every transfer. Real-time chat runs over WebSockets with Redis pub/sub fan-out and FCM push for offline users. Location-aware search uses a bounding-box DB filter ranked by Google Maps distance, with Redis-cached results keyed to the user's last-known location. Corporate storefronts, QR-based check-in verification for in-person handoffs, and a Cliq Token referral reward system round it out. Flutter mobile app, NestJS backend.
+<br/><br/>
 
-**[Volta](https://github.com/ayorcodes/volta)** — smart power operations SaaS for facilities that run on backup generators. Multi-tenant, role-based (owner / facility manager / security). FIFO tank ledger tracks fuel across multiple purchase lots so session cost estimates are accurate even when fuel came from different batches at different prices. Generator scheduling materializes into concrete sessions with pre-run reminders via in-app, email, or WhatsApp (Twilio). Power switch events are logged with fuel snapshots; configurable thresholds control auto-switch-back. Event-driven notification pipeline, Socket.io real-time dashboard, audit trail on everything, Stripe + Paystack billing, and VoltaBot — a Claude-powered AI assistant for querying operations data conversationally.
-
-**[SyBoard](https://github.com/ayorcodes/syboard)** — collaborative kanban with real multiplayer. Yjs CRDT handles conflict-free card editing so two people editing the same card simultaneously don't stomp on each other. Redis pub/sub fans out WebSocket events across instances, meaning horizontal scaling doesn't break presence or live updates.
-
-**[EstateOS](https://github.com/ayorcodes/estateos)** — the backend OS for residential estates. Multi-tenant SaaS with unit/resident hierarchy, electricity metering, generator scheduling, dues, and Paystack billing. Built with NestJS and Next.js.
-
-**[Billflow](https://github.com/ayorcodes/billflow)** — billing infrastructure as a service. Handles subscriptions, usage metering, automated dunning, and routes payments to Stripe or Paystack based on the customer's country.
-
----
-
-## Experience
-
-**CopyMe Crypto** `2026 – Present`
-Crypto copy-trading platform. I work across all four surfaces — NestJS backend, Flutter mobile app, React admin dashboard, and the public site. Built and maintain the copy engine that mirrors lead traders' positions onto their followers' exchange accounts, including the fixes that keep every trade attributed and credited to the right trader. Added exchange-account connection checks that block copying when an account isn't set up correctly, plus cost and risk rules that bound what a follower can lose. Shipped account deletion end to end across all four, with the audit trail a launch reviewer expects. Redesigned the mobile app against a token-driven design system so every colour, spacing, and motion value comes from the theme, and set up CI checks and alerting so failures surface before customers find them.
-
-**Raqet** `2026 – Present`
-Padel club platform and player app, live on the App Store and Google Play. Solo build end to end — backend API, three web apps, a Flutter player app, and the infrastructure to run it. Designed the payment layer for correctness under concurrency: row-level locks against wallet double-spend, idempotent webhook handlers, and bookings that only commit once every player in a split has paid.
-
-**Opsin** `2025 – 2026`
-Crypto trading platform. Built the real-time social signal layer — Discord and Telegram ingestion, token-call parsing (`$TICKER`, `.c` commands), caller performance panels, and the overwatch feed that traders actually rely on. Also reworked discovery and watchlist data flows using ClickHouse, fixed some gnarly RabbitMQ connection handling that was causing silent ingestion drops, and added wallet import/export for multi-wallet traders.
-
-**Moralis** `2021 – 2025`
-Joined when the whole backend was Express and left it NestJS + gRPC microservices. Over ~3.5 years I shipped 30+ production features — dynamic pricing engines, NFT floor pricing, token metadata pipelines, blockchain node integrations, a tiered BullMQ queue for NFT jobs that meaningfully improved premium user latency. Also built internal tooling, Slack-based error alerting, and wrote most of the API documentation that new engineers used to get up to speed.
-
-**SpottR** `2021 – 2022`
-Crypto marketplace. Built the wallet system from scratch — fiat and crypto (Cliq Token, BNB, ETH), Threshold Network integration, Paystack, Redis caching, and the location-aware listing logic. Also did chat, notifications, and the queue-based transaction layer.
-
-**Joovlin** `2020 – 2021`
-Fintech. First real production backend I owned end-to-end. Designed the payment and wallet microservices, migrated a monolith to services, and built the transaction audit trail that compliance actually needed.
-
----
-
-**[@ayorcodes/claudespace](https://www.npmjs.com/package/@ayorcodes/claudespace)** — multi-agent Claude Code pipeline, installable globally
-
-**[@ayorcodes/remita-js](https://www.npmjs.com/package/@ayorcodes/remita-js)** — Node.js SDK for the Remita payment API
-
-[linkedin.com/in/ayomide-adejola](https://linkedin.com/in/ayomide-adejola) · adeayo35@gmail.com
+<img src="https://komarev.com/ghpvc/?username=ayorcodes&label=profile%20views&color=8b949e&style=flat-square" alt="Profile views"/>
