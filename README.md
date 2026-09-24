@@ -1,5 +1,7 @@
 # Ayomide Adejola
 
+![Profile views](https://komarev.com/ghpvc/?username=ayorcodes&label=Profile%20views&color=0e75b6&style=flat)
+
 Software engineer. TypeScript, NestJS, Flutter, Next.js. Been doing this since 2020 — mobile, web, and backend, mostly fintech, crypto, and whatever interesting problems show up in between.
 
 I care about clean architecture, good test coverage, and systems that don't break at 3am. My work tends to live in the layer between the database and the API surface — queues, webhooks, real-time pipelines, payment flows — and lately in the apps people actually hold.
