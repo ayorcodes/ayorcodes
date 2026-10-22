@@ -15,9 +15,37 @@ I ship in small, steady pieces. At CopyMe I've merged 159 pull requests in the l
 
 <br/>
 
+### Now shipping: Cadre
+
+<a href="https://usecadre.dev">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/cadre-hero-dark.svg"/>
+    <img src="./assets/cadre-hero-light.svg" width="100%" alt="Cadre running a task: Chief, Researcher, Planner, Principal, Implementer and Reviewer take turns, the reviewer sends one change back, and the run ends in a pull request"/>
+  </picture>
+</a>
+
+One AI session doing everything drifts. It redesigns while it builds, then reviews its own work and passes it. Cadre splits the job the way a team does: each role is its own agent session with one job, the work moves from role to role on its own, and a reviewer that never wrote the code decides when it's done. You answer the questions that are yours and review the pull request.
+
+[usecadre.dev](https://usecadre.dev) &nbsp;·&nbsp; [Download for Mac](https://github.com/ayorcodes/cadre/releases/latest) &nbsp;·&nbsp; [CLI on npm](https://www.npmjs.com/package/@ayorcodes/cadre)
+
+<br/>
+
 ### Products I built on my own
 
 <table>
+  <tr>
+    <td colspan="3" valign="top">
+      <a href="https://usecadre.dev">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./assets/cadre-built-dark.svg"/>
+          <img src="./assets/cadre-built-light.svg" width="100%" alt="How Cadre is built: six roles hand a task along to you, over a desktop app, an engine and your coding agents"/>
+        </picture>
+      </a>
+      <p><a href="https://usecadre.dev"><b>Cadre</b></a><br/>
+      A desktop app that gives one coding task a team of agents: research, plan, design, build and review, ending in a pull request assigned to you. Works with Claude Code, Codex and Cursor's agent, on your own plan or API key.</p>
+      <p>Two codebases. The Electron and React app has 403 commits, 376 merged PRs and 527 test files since September. The Python engine it drives, also a CLI on npm and PyPI, has 477 commits and 312 merged PRs since July. Released for Mac at 0.7.0. <a href="https://usecadre.dev">Website</a> · <a href="https://github.com/ayorcodes/cadre/releases/latest">Download</a></p>
+    </td>
+  </tr>
   <tr>
     <td width="33%" valign="top">
       <a href="https://getraqet.com"><img src="./assets/raqet.jpg" alt="Raqet mobile app"/></a>
@@ -43,7 +71,6 @@ I ship in small, steady pieces. At CopyMe I've merged 159 pull requests in the l
 ### Tools I've made
 
 <table>
-  <tr><td nowrap><a href="https://www.npmjs.com/package/@ayorcodes/claudespace"><b>claudespace</b></a></td><td>Runs a small team of Claude Code agents in one terminal. Each has one job, such as planning, writing code or reviewing it, and passes its work to the next when it's done.</td></tr>
   <tr><td nowrap><a href="https://github.com/ayorcodes/opclaude"><b>opclaude</b></a></td><td>Lets you use the Claude Code CLI with other models, through opencode, Ollama or any OpenAI-compatible provider.</td></tr>
   <tr><td nowrap><a href="https://github.com/ayorcodes/faxo"><b>faxo</b></a></td><td>A payment gateway for accepting USDC on Ethereum, Base and BNB Chain. Funds move to the merchant's treasury automatically after each payment.</td></tr>
   <tr><td nowrap><a href="https://github.com/ayorcodes/SenDT"><b>SenDT</b></a></td><td>Deposit crypto and send naira to any Nigerian bank account, without going through an exchange.</td></tr>
